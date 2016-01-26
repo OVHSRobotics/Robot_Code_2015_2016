@@ -1,4 +1,4 @@
-package info.ovhs.robotics;
+package com.team4619.robot2016;
 /**
  * The RobotMap is a mapping from the ports sensors and actuators are wired into
  * to a variable name. This provides flexibility changing wiring, makes checking

@@ -1,4 +1,4 @@
-package info.ovhs.robotics.subsystems;
+package com.team4619.robot2016.subsystems;
 
 import edu.wpi.first.wpilibj.Servo;
 import edu.wpi.first.wpilibj.TalonSRX;
@@ -65,15 +65,15 @@ public class ShooterMechanism {
 		}
 	}
 
-	public void ServoRetract()
+	public void HoldBall()
 	{
-		//sets servo to start
+		//sets servo to start position which keeps the ball from hitting the shooters
 		bumper.set(0);
 	}
 
-	public void ServoExtend()
+	public void PushBallForward()
 	{
-		//sets servo to full extension
+		//sets servo to full extension which pushes the ball forward to shoot
 		bumper.set(1);
 	}
 }

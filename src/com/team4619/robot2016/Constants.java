@@ -25,4 +25,7 @@ public class Constants {
 
 	//creates robot drive
 	public static RobotDrive driveMain = new RobotDrive(frontLeft, frontRight, backLeft, backRight);
+	
+	//creates constants for different SPEEDS
+	public final double climbSpeed = .25;
 }

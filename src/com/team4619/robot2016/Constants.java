@@ -2,6 +2,7 @@ package com.team4619.robot2016;
 
 import edu.wpi.first.wpilibj.Joystick;
 import edu.wpi.first.wpilibj.RobotDrive;
+import edu.wpi.first.wpilibj.Servo;
 import edu.wpi.first.wpilibj.TalonSRX;
 import edu.wpi.first.wpilibj.VictorSP;
 
@@ -16,6 +17,9 @@ public class Constants {
 	public static VictorSP backLeft = new VictorSP(2);
 	public static VictorSP backRight = new VictorSP(3);
 
+	//creates servo for bumping the ball forward
+	public static Servo bumper = new Servo(1);
+	
 	//creates two shooters
 	public static VictorSP leftShooter = new VictorSP(4);
 	public static VictorSP rightShooter = new VictorSP(5);
@@ -25,7 +29,9 @@ public class Constants {
 
 	//creates robot drive
 	public static RobotDrive driveMain = new RobotDrive(frontLeft, frontRight, backLeft, backRight);
-	
+
 	//creates constants for different SPEEDS
 	public final double climbSpeed = .25;
+	public final double shooterSpeed = 1;
+	public final double intakeSpeed = .33;
 }

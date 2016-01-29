@@ -27,9 +27,9 @@ public class ArcadeDrive {
 		this.backLeft = backLeft;
 		this.xJoystick = xJoystick;
 	}
-	public void Drive()
+	public void ArcadeDrive()
 	{
-		//need to add another joystick
-		driveMain.arcadeDrive(xJoystick,true);
+		
+		driveMain.arcadeDrive(xJoystick.getRawAxis(1), xJoystick.getRawAxis(4), true);
 	}
 }

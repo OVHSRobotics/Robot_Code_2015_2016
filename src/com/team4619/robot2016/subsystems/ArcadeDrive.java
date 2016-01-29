@@ -7,19 +7,19 @@ import edu.wpi.first.wpilibj.VictorSP;
 public class ArcadeDrive {
 
 	public VictorSP frontLeft,
-				frontRight,
-				backLeft,
-				backRight;
+					frontRight,
+					backLeft,
+					backRight;
 
 	Joystick xJoystick;
 
 	RobotDrive driveMain = new RobotDrive(frontLeft, frontRight, backLeft, backRight);
-	
+
 	public ArcadeDrive(VictorSP frontLeft,
-						VictorSP frontRight,
-						VictorSP backLeft,
-						VictorSP backRight,
-						Joystick xJoystick)
+			VictorSP frontRight,
+			VictorSP backLeft,
+			VictorSP backRight,
+			Joystick xJoystick)
 	{
 		this.frontLeft = frontLeft;
 		this.frontRight = frontRight;

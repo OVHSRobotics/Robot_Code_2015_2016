@@ -10,10 +10,10 @@ import edu.wpi.first.wpilibj.VictorSP;
 public class Constants {
 
 	//sets standard actuation speed
-	public final static double ACTUATION_SPEED_UNIT_CYCLES = .2;
+	public final static double ACTUATION_SPEED_UNIT_CYCLES = .3;
 
 	//counts actuation angle
-	public final static int SHOOTER_ANGLE = 0;
+	public final static double SHOOTER_ANGLE_DEGREES = .45;
 	
 	//sets standard climbing speed 
 	public final static double CLIMBER_MOTOR_SPEED_UNIT_CYCLES = .15;

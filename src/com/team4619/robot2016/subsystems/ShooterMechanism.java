@@ -35,18 +35,18 @@ public class ShooterMechanism {
 	public static void ActuateDown()
 	{
 		//actuates up and actuationAngles to certain height
-		if ((Constants.actuationAngle) > 0 && !((Constants.actuationAngle) - 1 > 0))
+		if ((Constants.SHOOTER_ANGLE_DEGREES) > 0 && !((Constants.SHOOTER_ANGLE_DEGREES) - 1 > 0))
 		{
-			(RobotMap.actuator).set(-(Constants.actuationSpeed));
+			(RobotMap.actuator).set(-(Constants.ACTUATION_SPEED_UNIT_CYCLES));
 		}
 	}
 
 	public static void ActuateUp()
 	{
 		//actuates down and actuationAngles to certain height
-		if ((Constants.actuationAngle) < 1 && !((Constants.actuationAngle) + 1 < 90))
+		if ((Constants.SHOOTER_ANGLE_DEGREES) < 1 && !((Constants.SHOOTER_ANGLE_DEGREES) + 1 < 90))
 		{
-			(RobotMap.actuator).set((Constants.actuationSpeed));
+			(RobotMap.actuator).set(Constants.ACTUATION_SPEED_UNIT_CYCLES);
 		}
 	}
 

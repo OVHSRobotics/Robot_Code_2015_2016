@@ -10,12 +10,6 @@ public class ShooterMechanism {
 	//creates servo object
 	private static Servo bumper;
 
-	//sets standard actuation speed
-	private static double actuationSpeed = .2;
-
-	//counts actuation angle
-	private static int actuationAngle = 0;
-
 	public static void Shoot()
 	{
 		//shoots the ball at 100% power
@@ -33,18 +27,18 @@ public class ShooterMechanism {
 	public static void ActuateDown()
 	{
 		//actuates up and actuationAngles to certain height
-		if (actuationAngle > 0 && !(actuationAngle - 1 > 0))
+		if ((Constants.actuationAngle) > 0 && !((Constants.actuationAngle) - 1 > 0))
 		{
-			(Constants.actuator).set(-actuationSpeed);
+			(Constants.actuator).set(-(Constants.actuationSpeed));
 		}
 	}
 
 	public static void ActuateUp()
 	{
 		//actuates down and actuationAngles to certain height
-		if (actuationAngle < 1 && !(actuationAngle + 1 < 90))
+		if ((Constants.actuationAngle) < 1 && !((Constants.actuationAngle) + 1 < 90))
 		{
-			(Constants.actuator).set(actuationSpeed);
+			(Constants.actuator).set((Constants.actuationSpeed));
 		}
 	}
 

@@ -35,4 +35,10 @@ public class Constants {
 	//creates robot drive
 	public static RobotDrive driveMain = new RobotDrive(frontLeft, frontRight, backLeft, backRight);
 
+	//sets standard actuation speed
+	public static double actuationSpeed = .2;
+
+	//counts actuation angle
+	public static int actuationAngle = 0;
+
 }

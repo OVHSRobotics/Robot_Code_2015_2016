@@ -19,15 +19,15 @@ public class ShooterMechanism {
 	public static void Shoot()
 	{
 		//shoots the ball at 100% power
-		(Constants.leftShooter).set(1);
-		(Constants.rightShooter).set(-1);
+		(RobotMap.leftShooter).set(1);
+		(RobotMap.rightShooter).set(-1);
 	}
 
 	public static void Intake()
 	{
 		//intakes the ball at 32% power
-		(Constants.leftShooter).set(-.32);
-		(Constants.rightShooter).set(.32);
+		(RobotMap.leftShooter).set(-.32);
+		(RobotMap.rightShooter).set(.32);
 	}
 
 	public static void ActuateDown()
@@ -35,7 +35,7 @@ public class ShooterMechanism {
 		//actuates up and actuationAngles to certain height
 		if (actuationAngle > 0 && !(actuationAngle - 1 > 0))
 		{
-			(Constants.actuator).set(-actuationSpeed);
+			(RobotMap.actuator).set(-actuationSpeed);
 		}
 	}
 
@@ -44,7 +44,7 @@ public class ShooterMechanism {
 		//actuates down and actuationAngles to certain height
 		if (actuationAngle < 1 && !(actuationAngle + 1 < 90))
 		{
-			(Constants.actuator).set(actuationSpeed);
+			(RobotMap.actuator).set(actuationSpeed);
 		}
 	}
 

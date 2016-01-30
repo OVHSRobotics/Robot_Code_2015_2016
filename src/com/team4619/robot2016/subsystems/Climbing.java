@@ -11,12 +11,12 @@ public class Climbing {
 	public void ClimberExtend()
 	{
 		//extends tape measure
-		(Constants.climber).set(motorSpeed + .22);
+		(RobotMap.climber).set(motorSpeed + .22);
 	}
 	
 	public void ClimberRetract()
 	{
 		//retracts tape measure
-		(Constants.climber).set(-motorSpeed);
+		(RobotMap.climber).set(-motorSpeed);
 	}
 }

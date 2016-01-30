@@ -1,6 +1,6 @@
 package com.team4619.robot2016.subsystems;
 
-import com.team4619.robot2016.Constants;
+import com.team4619.robot2016.RobotMap;
 
 import edu.wpi.first.wpilibj.Joystick;
 import edu.wpi.first.wpilibj.RobotDrive;
@@ -11,6 +11,6 @@ public class ArcadeDrive {
 	//Drives with tank drive
 	public void ArcadeDrive()
 	{	
-		(Constants.driveMain).arcadeDrive((Constants.xBoxController).getRawAxis(1), (Constants.xBoxController).getRawAxis(4), true);
+		(RobotMap.driveMain).arcadeDrive((RobotMap.xBoxController).getRawAxis(1), (RobotMap.xBoxController).getRawAxis(4), true);
 	}
 }

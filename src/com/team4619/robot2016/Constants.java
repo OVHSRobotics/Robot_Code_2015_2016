@@ -4,6 +4,7 @@ import edu.wpi.first.wpilibj.Joystick;
 import edu.wpi.first.wpilibj.RobotDrive;
 import edu.wpi.first.wpilibj.Servo;
 import edu.wpi.first.wpilibj.TalonSRX;
+import edu.wpi.first.wpilibj.Victor;
 import edu.wpi.first.wpilibj.VictorSP;
 
 public class Constants {
@@ -23,17 +24,15 @@ public class Constants {
 	//creates two shooters
 	public static VictorSP leftShooter = new VictorSP(4);
 	public static VictorSP rightShooter = new VictorSP(5);
-
+	
+	//creates a climber
+	public static Victor climber = new Victor(7);
+	
 	//creates actuator using TalonSRX
 	public static TalonSRX actuator = new TalonSRX(6);
 
+	
 	//creates robot drive
 	public static RobotDrive driveMain = new RobotDrive(frontLeft, frontRight, backLeft, backRight);
 
-	//creates constants for different SPEEDS 
-	public final double climbSpeed = .25;
-	public final double shooterSpeed = 1;
-	public final double intakeSpeed = .33;
-	public final double actuationAngle = 0;
-	public final double actuationSpeed = .33;
 }

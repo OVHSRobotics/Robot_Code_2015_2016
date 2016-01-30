@@ -10,6 +10,6 @@ public class TankDrive {
 	//Drives with tank drive
 	public void Drive()
 	{
-		(Constants.driveMain).tankDrive((Constants.xBoxController).getRawAxis(1), (Constants.xBoxController).getRawAxis(5), true);
+		(RobotMap.driveMain).tankDrive((RobotMap.xBoxController).getRawAxis(1), (RobotMap.xBoxController).getRawAxis(5), true);
 	}
 }

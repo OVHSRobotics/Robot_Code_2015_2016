@@ -7,9 +7,6 @@ import com.team4619.robot2016.*;
 
 public class ShooterMechanism {
 
-	//creates servo object
-	private static Servo bumper;
-
 	//sets standard actuation speed
 	private static double actuationSpeed = .2;
 
@@ -51,12 +48,12 @@ public class ShooterMechanism {
 	public static void HoldBall()
 	{
 		//sets servo to start position which keeps the ball from hitting the shooters
-		bumper.set(0);
+		(RobotMap.bumper).set(0);
 	}
 
 	public static void PushBallForward()
 	{
 		//sets servo to full extension which pushes the ball forward to shoot
-		bumper.set(1);
+		(RobotMap.bumper).set(1);
 	}
 }

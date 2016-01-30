@@ -24,22 +24,6 @@ public class Robot extends IterativeRobot {
 
     Command autonomousCommand;
     
-    // created speed controller objects
-    VictorSP frontLeft = new VictorSP (0);
-    VictorSP frontRight = new VictorSP (1);
-    VictorSP backLeft = new VictorSP (2);
-    VictorSP backRight = new VictorSP (3);
-    
-    // created speed controller for shooters
-    Victor leftShooter = new Victor (4);
-    Victor rightShooter = new Victor (5);
-    
-    //created joystick objects
-    Joystick xBox = new Joystick (0);
-    
-    // created robot drive object to use with arcade drive
-    RobotDrive driveMain = new RobotDrive(frontLeft, frontRight, backLeft, backRight);
-    
     /**
      * This function is run when the robot is first started up and should be
      * used for any initialization code.
@@ -87,8 +71,6 @@ public class Robot extends IterativeRobot {
     public void teleopPeriodic() {
         Scheduler.getInstance().run();
         
-        //created arcade drive
-        driveMain.arcadeDrive(-xBox.getRawAxis(1), -xBox.getRawAxis(4), true);
         
     }
     

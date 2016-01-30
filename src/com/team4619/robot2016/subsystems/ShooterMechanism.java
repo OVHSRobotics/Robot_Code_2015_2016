@@ -7,11 +7,16 @@ import com.team4619.robot2016.*;
 
 public class ShooterMechanism {
 
+
 	//sets standard actuation speed
 	private static double actuationSpeed = .2;
 
 	//counts actuation angle
 	private static int actuationAngle = 0;
+
+	//creates servo object
+	private static Servo bumper;
+
 
 	public static void Shoot()
 	{
@@ -30,18 +35,18 @@ public class ShooterMechanism {
 	public static void ActuateDown()
 	{
 		//actuates up and actuationAngles to certain height
-		if (actuationAngle > 0 && !(actuationAngle - 1 > 0))
+		if ((Constants.actuationAngle) > 0 && !((Constants.actuationAngle) - 1 > 0))
 		{
-			(RobotMap.actuator).set(-actuationSpeed);
+			(Constants.actuator).set(-(Constants.actuationSpeed));
 		}
 	}
 
 	public static void ActuateUp()
 	{
 		//actuates down and actuationAngles to certain height
-		if (actuationAngle < 1 && !(actuationAngle + 1 < 90))
+		if ((Constants.actuationAngle) < 1 && !((Constants.actuationAngle) + 1 < 90))
 		{
-			(RobotMap.actuator).set(actuationSpeed);
+			(Constants.actuator).set((Constants.actuationSpeed));
 		}
 	}
 

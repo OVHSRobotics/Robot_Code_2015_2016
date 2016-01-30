@@ -9,7 +9,7 @@ import edu.wpi.first.wpilibj.VictorSP;
 public class ArcadeDrive {
 
 	//Drives with tank drive
-	public void ArcadeDrive()
+	public static void Drive()
 	{	
 		(RobotMap.driveMain).arcadeDrive((RobotMap.xBoxController).getRawAxis(1), (RobotMap.xBoxController).getRawAxis(4), true);
 	}

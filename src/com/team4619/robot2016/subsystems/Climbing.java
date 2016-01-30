@@ -4,19 +4,16 @@ import edu.wpi.first.wpilibj.Victor;
 import com.team4619.robot2016.*;
 
 public class Climbing {
-
-	//sets motorspeed for tape measure climber
-	private double motorSpeed = .15;
 	
 	public void ClimberExtend()
 	{
 		//extends tape measure
-		(RobotMap.climber).set(motorSpeed + .22);
+		(Constants.climber).set((Constants.climberMotor) + .22);
 	}
 	
 	public void ClimberRetract()
 	{
 		//retracts tape measure
-		(RobotMap.climber).set(-motorSpeed);
+		(Constants.climber).set(-(Constants.climberMotor));
 	}
 }

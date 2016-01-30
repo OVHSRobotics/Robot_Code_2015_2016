@@ -11,4 +11,12 @@ public class Constants {
 
 	
 
+	//sets standard actuation speed
+	public static double actuationSpeed = .2;
+
+	//counts actuation angle
+	public static int actuationAngle = 0;
+	
+	//sets standard climbing speed
+	public static double climberMotor = .15;
 }

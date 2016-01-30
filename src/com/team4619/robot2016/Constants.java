@@ -34,4 +34,6 @@ public class Constants {
 	public final double climbSpeed = .25;
 	public final double shooterSpeed = 1;
 	public final double intakeSpeed = .33;
+	public final double actuationAngle = 0;
+	public final double actuationSpeed = .33;
 }

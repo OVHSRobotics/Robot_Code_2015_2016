@@ -7,15 +7,6 @@ import com.team4619.robot2016.*;
 
 public class ShooterMechanism {
 
-	//creates servo object
-	private Servo bumper;
-
-	//sets standard actuation speed
-	private double actuationSpeed = .2;
-
-	//counts actuation angle
-	int actuationAngle = 0;
-
 	public void Shoot()
 	{
 		//shoots the ball at 100% power

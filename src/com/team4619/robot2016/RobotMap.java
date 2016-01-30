@@ -1,5 +1,7 @@
 package com.team4619.robot2016;
 
+import edu.wpi.first.wpilibj.Compressor;
+import edu.wpi.first.wpilibj.DoubleSolenoid;
 import edu.wpi.first.wpilibj.Joystick;
 import edu.wpi.first.wpilibj.RobotDrive;
 import edu.wpi.first.wpilibj.Servo;
@@ -45,8 +47,10 @@ public class RobotMap {
 		
 		//creates actuator using TalonSRX
 		public static TalonSRX actuator = new TalonSRX(6);
-
 		
 		//creates robot drive
 		public static RobotDrive driveMain = new RobotDrive(frontLeft, frontRight, backLeft, backRight);
+		
+		public static Compressor compressor = new Compressor(0);
+		public static DoubleSolenoid piston1 = new DoubleSolenoid(1,2);
 }

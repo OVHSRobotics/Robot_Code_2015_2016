@@ -13,15 +13,15 @@ public class ShooterMechanism {
 	public static void Shoot()
 	{
 		//shoots the ball at 100% power
-		(Constants.leftShooter).set(1);
-		(Constants.rightShooter).set(-1);
+		(RobotMap.leftShooter).set(1);
+		(RobotMap.rightShooter).set(-1);
 	}
 
 	public static void Intake()
 	{
 		//intakes the ball at 32% power
-		(Constants.leftShooter).set(-.32);
-		(Constants.rightShooter).set(.32);
+		(RobotMap.leftShooter).set(-.32);
+		(RobotMap.rightShooter).set(.32);
 	}
 
 	public static void ActuateDown()

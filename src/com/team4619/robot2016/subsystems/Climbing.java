@@ -8,12 +8,12 @@ public class Climbing {
 	public void ClimberExtend()
 	{
 		//extends tape measure
-		(RobotMap.climber).set((Constants.CLIMBER_MOTOR_SPEED_UNIT_CYCLES) + .22);
+		RobotMap.climber.set(Constants.Range(Constants.CLIMBER_MOTOR_SPEED_DUTY_CYCLE + .22, -1, 1));
 	}
 	
 	public void ClimberRetract()
 	{
 		//retracts tape measure
-		(RobotMap.climber).set(-(Constants.CLIMBER_MOTOR_SPEED_UNIT_CYCLES));
+		RobotMap.climber.set(-Constants.CLIMBER_MOTOR_SPEED_DUTY_CYCLE);
 	}
 }

@@ -45,7 +45,7 @@ public class OI {
 			rBumper = new JoystickButton(xBoxController, 6),
 			Back = new JoystickButton(xBoxController, 7),
 			Start = new JoystickButton(xBoxController, 8),
-			leftJoystickButton = new JoystickButton(xBoxController, 8),
-			rightJoystickButton = new JoystickButton(xBoxController, 8);
+			leftJoystickButton = new JoystickButton(xBoxController, 9),
+			rightJoystickButton = new JoystickButton(xBoxController, 10);
 }
 

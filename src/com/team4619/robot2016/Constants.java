@@ -9,7 +9,7 @@ import edu.wpi.first.wpilibj.VictorSP;
 
 public class Constants {
 
-	//created xboxcontroller object
+	//created xboxcontroller object 
 	public static Joystick xBoxController = new Joystick(0);
 
 	//creates four motors

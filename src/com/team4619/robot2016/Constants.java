@@ -10,20 +10,11 @@ import edu.wpi.first.wpilibj.VictorSP;
 public class Constants {
 
 	//sets standard actuation speed
-	public static double actuationSpeed = .2;
+	public final static double ACTUATION_SPEED_UNIT_CYCLES = .2;
 
 	//counts actuation angle
-	public static int actuationAngle = 0;
+	public final static int SHOOTER_ANGLE = 0;
 	
-	//sets standard climbing speed
-	public static double climberMotor = .15;
-	
-	public class XBoxController { 
-		public final static int LEFT_JOYSTICK_X_AXIS = 0;
-		public final static int LEFT_JOYSTICK_Y_AXIS = 1;
-		public final static int RIGHT_JOYSTICK_X_AXIS = 4;
-		public final static int RIGHT_JOYSTICK_Y_AXIS = 5;
-		public final static int LEFT_TRIGGER = 2;
-		public final static int RIGHT_TRIGGER = 3;	
-	}
+	//sets standard climbing speed 
+	public final static double CLIMBER_MOTOR_SPEED_UNIT_CYCLES = .15;
 }

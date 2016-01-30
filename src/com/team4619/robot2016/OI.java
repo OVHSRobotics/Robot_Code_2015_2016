@@ -41,8 +41,8 @@ public class OI {
 	 */
 	private static OI instance;
 
-	public Joystick xBoxController = new Joystick(1);
-	public Button A = new JoystickButton(xBoxController, 1),
+	public static Joystick xBoxController = new Joystick(1);
+	public static Button A = new JoystickButton(xBoxController, 1),
 			B = new JoystickButton(xBoxController, 2),
 			X = new JoystickButton(xBoxController, 3),
 			Y = new JoystickButton(xBoxController, 4),

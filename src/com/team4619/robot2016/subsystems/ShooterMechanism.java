@@ -9,8 +9,16 @@ public class ShooterMechanism {
 
 	public void Shoot()
 	{
-		RobotMap.leftShooter.set(Constants.Shooter.SHOOT_POWER);
-		RobotMap.rightShooter.set(-Constants.Shooter.SHOOT_POWER);
+		if((RobotMap.xBoxController).getRawAxis(5)>0)
+		{
+			RobotMap.leftShooter.set(Constants.Shooter.shootPower);
+			RobotMap.rightShooter.set(-Constants.Shooter.shootPower);
+		}
+		else
+		{
+			RobotMap.rightShooter.set(0);
+			RobotMap.leftShooter.set(0);
+		}
 	}
 
 	public void Intake()
@@ -45,12 +53,22 @@ public class ShooterMechanism {
 	public void HoldBall()
 	{
 		//sets servo to start position which keeps the ball from hitting the shooters
-		RobotMap.bumper.set(0);
+		(RobotMap.bumper).set(0);
 	}
 
 	public void PushBallForward()
 	{
-		//sets servo to full extension which pushes the ball forward to shoot
-		RobotMap.bumper.set(1);
+		(RobotMap.bumper).set(1);
+	}
+	public static void changeShootSpeed()
+	{
+		if((Constants.Shooter.shootPower)+(Constants.Shooter.INCREMENT_RATE_UNIT_CYCLE)<=1 && OI.rBumper.get())
+		{
+			Constants.Shooter.shootPower += (Constants.Shooter.INCREMENT_RATE_UNIT_CYCLE);
+		}
+		else if((Constants.Shooter.shootPower)-.25>=(Constants.Shooter.INCREMENT_RATE_UNIT_CYCLE) && OI.lBumper.get())
+		{
+			Constants.Shooter.shootPower -= (Constants.Shooter.INCREMENT_RATE_UNIT_CYCLE);
+		}
 	}
 }

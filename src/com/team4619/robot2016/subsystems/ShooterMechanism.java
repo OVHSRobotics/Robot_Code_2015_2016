@@ -3,12 +3,9 @@ package com.team4619.robot2016.subsystems;
 import edu.wpi.first.wpilibj.Servo;
 import edu.wpi.first.wpilibj.TalonSRX;
 import edu.wpi.first.wpilibj.Victor;
+import com.team4619.robot2016.*;
 
 public class ShooterMechanism {
-	//creates speedcontrollers necessary for shooting mechanisms
-	private Victor leftShooter;
-	private Victor rightShooter;
-	private TalonSRX actuator;
 
 	//creates servo object
 	private Servo bumper;
@@ -19,32 +16,18 @@ public class ShooterMechanism {
 	//counts actuation angle
 	int actuationAngle = 0;
 
-	public ShooterMechanism(Victor leftShooter, 
-							Victor rightShooter, 
-							TalonSRX actuator, 
-							int actuationAngle, 
-							Servo bumper) 
-	{
-		//sets parameters to variables
-		this.leftShooter = leftShooter;
-		this.rightShooter = rightShooter;
-		this.actuator = actuator;
-		this.actuationAngle = actuationAngle;
-		this.bumper = bumper;
-	}
-
 	public void Shoot()
 	{
 		//shoots the ball at 100% power
-		leftShooter.set(1);
-		rightShooter.set(-1);
+		(Constants.leftShooter).set(1);
+		(Constants.rightShooter).set(-1);
 	}
 
 	public void Intake()
 	{
 		//intakes the ball at 32% power
-		leftShooter.set(-.32);
-		rightShooter.set(.32);
+		(Constants.leftShooter).set(-.32);
+		(Constants.rightShooter).set(.32);
 	}
 
 	public void ActuateDown()
@@ -52,7 +35,7 @@ public class ShooterMechanism {
 		//actuates up and actuationAngles to certain height
 		if (actuationAngle > 0 && !(actuationAngle - 1 > 0))
 		{
-			actuator.set(-actuationSpeed);
+			(Constants.actuator).set(-actuationSpeed);
 		}
 	}
 
@@ -61,7 +44,7 @@ public class ShooterMechanism {
 		//actuates down and actuationAngles to certain height
 		if (actuationAngle < 1 && !(actuationAngle + 1 < 90))
 		{
-			actuator.set(actuationSpeed);
+			(Constants.actuator).set(actuationSpeed);
 		}
 	}
 

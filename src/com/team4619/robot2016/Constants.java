@@ -40,5 +40,7 @@ public class Constants {
 
 	//counts actuation angle
 	public static int actuationAngle = 0;
-
+	
+	//sets standard climbing speed
+	public static double climberMotor = .15;
 }

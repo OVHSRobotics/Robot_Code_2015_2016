@@ -1,6 +1,7 @@
 
 package com.team4619.robot2016;
 
+import com.team4619.robot2016.commands.CommandBase;
 import edu.wpi.first.wpilibj.GenericHID;
 import edu.wpi.first.wpilibj.IterativeRobot;
 import edu.wpi.first.wpilibj.Joystick;
@@ -10,6 +11,7 @@ import edu.wpi.first.wpilibj.VictorSP;
 import edu.wpi.first.wpilibj.command.Command;
 import edu.wpi.first.wpilibj.command.Scheduler;
 import edu.wpi.first.wpilibj.livewindow.LiveWindow;
+
 import com.team4619.robot2016.subsystems.*;
 
 /**
@@ -56,6 +58,10 @@ public class Robot extends IterativeRobot {
 		// continue until interrupted by another command, remove
 		// this line or comment it out.
 		if (autonomousCommand != null) autonomousCommand.cancel();
+		
+		if (CommandBase.driveTrain.getCurrentCommand() == null) {
+        	CommandBase.driveTrain.initDefaultCommand();
+        }
 	}
 
 	/**
@@ -71,7 +77,6 @@ public class Robot extends IterativeRobot {
 	 */
 	public void teleopPeriodic() {
 		Scheduler.getInstance().run();
-		ArcadeDrive.Drive();  
 	}
 
 	/**

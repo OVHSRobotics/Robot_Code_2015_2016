@@ -35,6 +35,11 @@ public class OI {
 	// Start the command when the button is released  and let it run the command
 	// until it is finished as determined by it's isFinished method.
 	// button.whenReleased(new ExampleCommand());
+	
+	/**	
+	 * Instance of the OI Class
+	 */
+	private static OI instance;
 
 	public Joystick xBoxController = new Joystick(1);
 	public Button A = new JoystickButton(xBoxController, 1),
@@ -47,5 +52,17 @@ public class OI {
 			Start = new JoystickButton(xBoxController, 8),
 			leftJoystickButton = new JoystickButton(xBoxController, 9),
 			rightJoystickButton = new JoystickButton(xBoxController, 10);
+	
+	/**
+     * Gets the instance of the OI Class and creates one if one doesn't exist
+     * @return instance of OI Class
+     */
+    public static OI getInstance() {
+    	if (OI.instance == null) {
+    		OI.instance = new OI();
+    	}
+    	
+    	return OI.instance;
+    }
 }
 

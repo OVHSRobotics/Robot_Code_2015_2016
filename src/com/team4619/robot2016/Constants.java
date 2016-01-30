@@ -17,4 +17,15 @@ public class Constants {
 	
 	//sets standard climbing speed 
 	public final static double CLIMBER_MOTOR_SPEED_UNIT_CYCLES = .15;
+	
+	public class XBoxController {
+		public final static int LEFT_JOYSTICK_X_AXIS = 0;
+		public final static int LEFT_JOYSTICK_Y_AXIS = 1; 
+		public final static int LEFT_TRIGGER = 2;
+		public final static int RIGHT_TRIGGER = 3;
+		public final static int RIGHT_JOYSTICK_X_AXIS = 4;
+		public final static int RIGHT_JOYSTICK_Y_AXIS = 5;
+		
+	}
 }
+ 

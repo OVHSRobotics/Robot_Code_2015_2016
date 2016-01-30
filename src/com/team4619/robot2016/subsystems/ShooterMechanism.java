@@ -37,7 +37,7 @@ public class ShooterMechanism {
 		//actuates up and actuationAngles to certain height
 		if ((Constants.actuationAngle) > 0 && !((Constants.actuationAngle) - 1 > 0))
 		{
-			(Constants.actuator).set(-(Constants.actuationSpeed));
+			(RobotMap.actuator).set(-(Constants.actuationSpeed));
 		}
 	}
 
@@ -46,7 +46,7 @@ public class ShooterMechanism {
 		//actuates down and actuationAngles to certain height
 		if ((Constants.actuationAngle) < 1 && !((Constants.actuationAngle) + 1 < 90))
 		{
-			(Constants.actuator).set((Constants.actuationSpeed));
+			(RobotMap.actuator).set((Constants.actuationSpeed));
 		}
 	}
 

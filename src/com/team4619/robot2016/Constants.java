@@ -9,8 +9,6 @@ import edu.wpi.first.wpilibj.VictorSP;
 
 public class Constants {
 
-	
-
 	//sets standard actuation speed
 	public static double actuationSpeed = .2;
 

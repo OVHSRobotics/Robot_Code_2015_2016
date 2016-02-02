@@ -1,5 +1,6 @@
 package com.team4619.robot2016.subsystems;
 
+import edu.wpi.first.wpilibj.CANTalon.FeedbackDevice;
 import edu.wpi.first.wpilibj.Servo;
 import edu.wpi.first.wpilibj.TalonSRX;
 import edu.wpi.first.wpilibj.Victor;
@@ -51,6 +52,10 @@ public class ShooterMechanism {
 	{
 		//actuates down and actuationAngles to certain height
 		RobotMap.actuator.set(Constants.ACTUATION_SPEED_DUTY_CYCLE);
+		
+		//chapters 10 12 13... 12.1.3
+		int pulseWidthPos = (RobotMap.actuation).getPulseWidthPosition();
+		
 	}
 	
 	public void StopChangingAngle()

@@ -1,5 +1,6 @@
 package com.team4619.robot2016;
 
+import edu.wpi.first.wpilibj.CANTalon;
 import edu.wpi.first.wpilibj.Compressor;
 import edu.wpi.first.wpilibj.DoubleSolenoid;
 import edu.wpi.first.wpilibj.Joystick;
@@ -51,6 +52,11 @@ public class RobotMap {
 		//creates robot drive
 		public static RobotDrive driveMain = new RobotDrive(frontLeft, frontRight, backLeft, backRight);
 		
+		
+		//creates objects necessary for pneumatics
 		public static Compressor compressor = new Compressor(0);
 		public static DoubleSolenoid piston1 = new DoubleSolenoid(1,2);
+		
+		//creates encoder object for actuation
+		public static CANTalon actuation = new CANTalon(0);
 }

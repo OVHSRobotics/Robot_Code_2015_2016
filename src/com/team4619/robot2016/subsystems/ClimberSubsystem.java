@@ -7,13 +7,27 @@ public class ClimberSubsystem {
 	
 	public void Extend()
 	{
-		//extends tape measure
-		RobotMap.climber.set(Constants.Range(Constants.CLIMBER_MOTOR_SPEED_DUTY_CYCLE + .22, -1, 1));
+		if((RobotMap.xBoxController).getRawAxis(8)>0);
+		{
+			RobotMap.climber.set(Constants.Range(Constants.CLIMBER_MOTOR_SPEED_DUTY_CYCLE + .22, -1, 1));
+		}
+		
+		else
+		{
+			RobotMap.climber.set(0);
+		}
+		
 	}
 	
 	public void Retract()
 	{
-		//retracts tape measure
-		RobotMap.climber.set(-Constants.CLIMBER_MOTOR_SPEED_DUTY_CYCLE);
+		if((RobotMap.xBoxController).getRawAxis(7)>0);
+		{
+			RobotMap.climber.set(-Constants.CLIMBER_MOTOR_SPEED_DUTY_CYCLE);
+		}
+		else
+	{
+			RobotMap.climber.set(0);
+		}
 	}
 }

@@ -44,7 +44,7 @@ public class ShooterMechanism {
 
 	public void AngleDown()
 	{
-		//actuates up and actuationAngles to certain height
+		//actuates up and actuationAnglecos to certain height
 		RobotMap.actuator.set(-Constants.ACTUATION_SPEED_DUTY_CYCLE);
 	}
 

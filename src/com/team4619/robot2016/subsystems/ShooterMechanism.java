@@ -9,7 +9,7 @@ public class ShooterMechanism {
 
 	public void Shoot()
 	{
-		if((RobotMap.xBoxController).getRawAxis(5)>0)
+		if((RobotMap.xBoxController.getRawAxis(Constants.XBoxController.RIGHT_TRIGGER)>0))
 		{
 			RobotMap.leftShooter.set(Constants.Shooter.shootPower);
 			RobotMap.rightShooter.set(-Constants.Shooter.shootPower);
@@ -23,8 +23,16 @@ public class ShooterMechanism {
 
 	public void Intake()
 	{
-		RobotMap.leftShooter.set(-Constants.Shooter.INTAKE_POWER);
-		RobotMap.rightShooter.set(Constants.Shooter.INTAKE_POWER);
+		if((RobotMap.xBoxController.getRawAxis(Constants.XBoxController.LEFT_TRIGGER)>0))
+		{
+			RobotMap.leftShooter.set(-Constants.Shooter.INTAKE_POWER);
+			RobotMap.rightShooter.set(Constants.Shooter.INTAKE_POWER);	
+		}
+		else
+		{
+			RobotMap.rightShooter.set(0);
+			RobotMap.leftShooter.set(0);
+		}
 	}
 	
 	public void StopShooter()
@@ -58,7 +66,14 @@ public class ShooterMechanism {
 
 	public void PushBallForward()
 	{
-		(RobotMap.bumper).set(1);
+		if ((RobotMap.xBoxController).getRawAxis(3)>0)
+		{
+			(RobotMap.bumper).set(1);
+		}
+		else
+		{
+			(RobotMap.bumper).set(0);
+		}
 	}
 	public static void changeShootSpeed()
 	{

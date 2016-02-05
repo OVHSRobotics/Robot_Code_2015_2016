@@ -16,9 +16,8 @@ public class Constants {
 	public final static double CLIMBER_MOTOR_SPEED_DUTY_CYCLE = .15;
 	
 	public static class Shooter {
-		public static double shootPower = .75;
 		public final static double INTAKE_POWER = .32;
-		public final static double INCREMENT_RATE_UNIT_CYCLE = .25;
+		public final static double INCREMENT_RATE_DUTY_CYCLE = .25;
 	}
 	
 	public class XBoxController {

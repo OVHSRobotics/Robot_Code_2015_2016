@@ -9,6 +9,7 @@ import edu.wpi.first.wpilibj.Servo;
 import edu.wpi.first.wpilibj.TalonSRX;
 import edu.wpi.first.wpilibj.Victor;
 import edu.wpi.first.wpilibj.VictorSP;
+import com.team4619.robot2016.*;
 
 /**
  * The RobotMap is a mapping from the ports sensors and actuators are wired into
@@ -31,23 +32,23 @@ public class RobotMap {
 		public static Joystick xBoxController = new Joystick(0);
 
 		//creates four motors
-		public static VictorSP frontLeft = new VictorSP(0);
-		public static VictorSP frontRight = new VictorSP(1);
-		public static VictorSP backLeft = new VictorSP(2);
-		public static VictorSP backRight = new VictorSP(3);
+		public static VictorSP frontLeft = new VictorSP(Constants.PWMPorts.PWM_PORT_ZERO);
+		public static VictorSP frontRight = new VictorSP(Constants.PWMPorts.PWM_PORT_ONE);
+		public static VictorSP backLeft = new VictorSP(Constants.PWMPorts.PWM_PORT_TWO);
+		public static VictorSP backRight = new VictorSP(Constants.PWMPorts.PWM_PORT_THREE);
 
 		//creates servo for bumping the ball forward
 		public static Servo bumper = new Servo(1);
 		
 		//creates two shooters
-		public static VictorSP leftShooter = new VictorSP(4);
-		public static VictorSP rightShooter = new VictorSP(5);
+		public static VictorSP leftShooter = new VictorSP(Constants.PWMPorts.PWM_PORT_FOUR);
+		public static VictorSP rightShooter = new VictorSP(Constants.PWMPorts.PWM_PORT_FIVE);
 		
 		//creates a climber
-		public static Victor climber = new Victor(7);
+		public static Victor climber = new Victor(Constants.PWMPorts.PWM_PORT_SEVEN);
 		
 		//creates actuator using TalonSRX
-		public static TalonSRX actuator = new TalonSRX(6);
+		public static TalonSRX actuator = new TalonSRX(Constants.PWMPorts.PWM_PORT_SIX);
 		
 		//creates robot drive
 		public static RobotDrive driveMain = new RobotDrive(frontLeft, frontRight, backLeft, backRight);

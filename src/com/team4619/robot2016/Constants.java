@@ -30,6 +30,19 @@ public class Constants {
 		public final static int RIGHT_JOYSTICK_Y_AXIS = 5;
 
 	}
+
+	public class PWMPorts {
+		public static final int PWM_PORT_ZERO = 0;
+		public static final int PWM_PORT_ONE = 1;
+		public static final int PWM_PORT_TWO = 2;
+		public static final int PWM_PORT_THREE = 3;
+		public static final int PWM_PORT_FOUR = 4;
+		public static final int PWM_PORT_FIVE = 5;
+		public static final int PWM_PORT_SIX = 6;
+		public static final int PWM_PORT_SEVEN = 7;
+		public static final int PWM_PORT_EIGHT = 8;
+		public static final int PWM_PORT_NINE = 9;
+	}
 	
 	public static double Range(double value, double min, double max) {
 		return Math.min(max, Math.max(value, min));

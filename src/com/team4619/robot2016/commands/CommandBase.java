@@ -28,6 +28,8 @@ public abstract class CommandBase extends Command {
 	public static PneumaticDriveTrainShifting pneumaticDriveTrainShifting;
 	
 	public static ShooterMechanism shooterMechanism;
+	
+	public static ClimberSubsystem climberMechanism;
 	/**
 	 * Instance of the OI Class
 	 */
@@ -40,6 +42,8 @@ public abstract class CommandBase extends Command {
 		CommandBase.driveTrain = DriveTrain.getInstance();
 		
 		CommandBase.shooterMechanism = ShooterMechanism.getInstance();
+		
+		CommandBase.climberMechanism = ClimberSubsystem.getInstance();
 		
 		// Must be initialized after all subsystems
 		CommandBase.oi = OI.getInstance();

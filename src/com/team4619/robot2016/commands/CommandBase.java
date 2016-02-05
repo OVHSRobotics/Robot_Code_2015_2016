@@ -24,6 +24,8 @@ public abstract class CommandBase extends Command {
 	 * Instance of the Drive Train Subsystem
 	 */
 	public static DriveTrain driveTrain;
+	
+	public static ShooterMechanism shooterMechanism;
 	/**
 	 * Instance of the OI Class
 	 */
@@ -34,6 +36,8 @@ public abstract class CommandBase extends Command {
 	 */
 	public static void init() {
 		CommandBase.driveTrain = DriveTrain.getInstance();
+		
+		CommandBase.shooterMechanism = ShooterMechanism.getInstance();
 		
 		// Must be initialized after all subsystems
 		CommandBase.oi = OI.getInstance();

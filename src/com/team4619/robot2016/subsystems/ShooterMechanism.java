@@ -9,6 +9,7 @@ import edu.wpi.first.wpilibj.command.Subsystem;
 
 import com.team4619.robot2016.*;
 import com.team4619.robot2016.commands.TankDrive;
+import com.team4619.robot2016.commands.shootermechanism.Stop;
 
 public class ShooterMechanism extends Subsystem{
 
@@ -23,7 +24,7 @@ public class ShooterMechanism extends Subsystem{
 	@Override
 	protected void initDefaultCommand() {
 		// TODO Auto-generated method stub
-		
+		setDefaultCommand(new Stop());
 	}
 	
 	public static ShooterMechanism getInstance() {

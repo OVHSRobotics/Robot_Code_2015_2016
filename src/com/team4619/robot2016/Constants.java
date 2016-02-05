@@ -11,16 +11,16 @@ public class Constants {
 
 	//sets standard actuation speed
 	public final static double ACTUATION_SPEED_DUTY_CYCLE = .3;
-	
+
 	//sets standard climbing speed 
 	public final static double CLIMBER_MOTOR_SPEED_DUTY_CYCLE = .15;
-	
+
 	public static class Shooter {
 		public static double shootPower = .75;
 		public final static double INTAKE_POWER = .32;
 		public final static double INCREMENT_RATE_UNIT_CYCLE = .25;
 	}
-	
+
 	public class XBoxController {
 		public final static int LEFT_JOYSTICK_X_AXIS = 0;
 		public final static int LEFT_JOYSTICK_Y_AXIS = 1; 
@@ -38,22 +38,23 @@ public class Constants {
 		public final static int START = 13;
 		public final static int LEFT_JOYSTICK_BUTTON = 14;
 		public final static int RIGHT_JOYSTICK_BUTTON = 15;
-		
+
 	}
-	
-	public class PWMPorts {
-		public static final int PWM_PORT_ZERO = 0;
-		public static final int PWM_PORT_ONE = 1;
-		public static final int PWM_PORT_TWO = 2;
-		public static final int PWM_PORT_THREE = 3;
-		public static final int PWM_PORT_FOUR = 4;
-		public static final int PWM_PORT_FIVE = 5;
-		public static final int PWM_PORT_SIX = 6;
-		public static final int PWM_PORT_SEVEN = 7;
-		public static final int PWM_PORT_EIGHT = 8;
-		public static final int PWM_PORT_NINE = 9;
+
+	public class PWMDrivingPorts {
+		public static final int FRONT_LEFT_MOTOR_PORT = 0;
+		public static final int FRONT_RIGHT_MOTOR_PORT = 1;
+		public static final int BACK_LEFT_MOTOR_PORT = 2;
+		public static final int BACK_RIGHT_MOTOR_PORT = 3;
 	}
-	
+
+	public static final int LEFT_SHOOTER_MOTOR_PORT = 4;
+	public static final int RIGHT_SHOOTER_MOTOR_PORT = 5;
+	public static final int ACTUATOR_MOTOR_PORT = 6;
+	public static final int CLIMBER_MOTOR_PORT = 7;
+	public static final int SERVO_BUMPER_PORT = 8;
+	public static final int PWM_PORT_NINE = 9;
+
 	public static double Range(double value, double min, double max) {
 		return Math.min(max, Math.max(value, min));
 	}

@@ -42,16 +42,16 @@ public class OI {
 	private static OI instance;
 
 	public static Joystick xBoxController = new Joystick(1);
-	public static Button A = new JoystickButton(xBoxController, 1),
-			B = new JoystickButton(xBoxController, 2),
-			X = new JoystickButton(xBoxController, 3),
-			Y = new JoystickButton(xBoxController, 4),
-			lBumper = new JoystickButton(xBoxController, 5),
-			rBumper = new JoystickButton(xBoxController, 6),
-			Back = new JoystickButton(xBoxController, 7),
-			Start = new JoystickButton(xBoxController, 8),
-			leftJoystickButton = new JoystickButton(xBoxController, 9),
-			rightJoystickButton = new JoystickButton(xBoxController, 10);
+	public static Button A = new JoystickButton(xBoxController, Constants.XBoxController.BUTTON_A),
+			B = new JoystickButton(xBoxController, Constants.XBoxController.BUTTON_B),
+			X = new JoystickButton(xBoxController, Constants.XBoxController.BUTTON_X),
+			Y = new JoystickButton(xBoxController, Constants.XBoxController.BUTTON_Y),
+			lBumper = new JoystickButton(xBoxController, Constants.XBoxController.L_BUMPER),
+			rBumper = new JoystickButton(xBoxController, Constants.XBoxController.R_BUMPER),
+			Back = new JoystickButton(xBoxController, Constants.XBoxController.BACK),
+			Start = new JoystickButton(xBoxController, Constants.XBoxController.START),
+			leftJoystickButton = new JoystickButton(xBoxController,  Constants.XBoxController.RIGHT_JOYSTICK_BUTTON),
+			rightJoystickButton = new JoystickButton(xBoxController,  Constants.XBoxController.RIGHT_JOYSTICK_BUTTON );
 	
 	/**
      * Gets the instance of the OI Class and creates one if one doesn't exist

@@ -28,21 +28,19 @@ public class Constants {
 		public final static int RIGHT_TRIGGER = 3;
 		public final static int RIGHT_JOYSTICK_X_AXIS = 4;
 		public final static int RIGHT_JOYSTICK_Y_AXIS = 5;
-
+		public final static int BUTTON_A = 6;
+		public final static int BUTTON_B = 7;
+		public final static int BUTTON_X = 8;
+		public final static int BUTTON_Y = 9;
+		public final static int L_BUMPER = 10;
+		public final static int R_BUMPER = 11;
+		public final static int BACK = 12;
+		public final static int START = 13;
+		public final static int LEFT_JOYSTICK_BUTTON = 14;
+		public final static int RIGHT_JOYSTICK_BUTTON = 15;
+		
 	}
-
-	public class PWMPorts {
-		public static final int PWM_PORT_ZERO = 0;
-		public static final int PWM_PORT_ONE = 1;
-		public static final int PWM_PORT_TWO = 2;
-		public static final int PWM_PORT_THREE = 3;
-		public static final int PWM_PORT_FOUR = 4;
-		public static final int PWM_PORT_FIVE = 5;
-		public static final int PWM_PORT_SIX = 6;
-		public static final int PWM_PORT_SEVEN = 7;
-		public static final int PWM_PORT_EIGHT = 8;
-		public static final int PWM_PORT_NINE = 9;
-	}
+	
 	
 	public static double Range(double value, double min, double max) {
 		return Math.min(max, Math.max(value, min));

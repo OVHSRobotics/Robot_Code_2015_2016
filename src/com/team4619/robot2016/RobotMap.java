@@ -32,27 +32,26 @@ public class RobotMap {
 		public static Joystick xBoxController = new Joystick(0);
 
 		//creates four motors
-		public static VictorSP frontLeft = new VictorSP(Constants.PWMPorts.PWM_PORT_ZERO);
-		public static VictorSP frontRight = new VictorSP(Constants.PWMPorts.PWM_PORT_ONE);
-		public static VictorSP backLeft = new VictorSP(Constants.PWMPorts.PWM_PORT_TWO);
-		public static VictorSP backRight = new VictorSP(Constants.PWMPorts.PWM_PORT_THREE);
+		public static VictorSP frontLeft = new VictorSP(Constants.PWMDrivingPorts.FRONT_LEFT_MOTOR_PORT);
+		public static VictorSP frontRight = new VictorSP(Constants.PWMDrivingPorts.FRONT_RIGHT_MOTOR_PORT);
+		public static VictorSP backLeft = new VictorSP(Constants.PWMDrivingPorts.BACK_LEFT_MOTOR_PORT);
+		public static VictorSP backRight = new VictorSP(Constants.PWMDrivingPorts.BACK_RIGHT_MOTOR_PORT);
 
 		//creates servo for bumping the ball forward
-		public static Servo bumper = new Servo(1);
+		public static Servo bumper = new Servo(8);
 		
 		//creates two shooters
-		public static VictorSP leftShooter = new VictorSP(Constants.PWMPorts.PWM_PORT_FOUR);
-		public static VictorSP rightShooter = new VictorSP(Constants.PWMPorts.PWM_PORT_FIVE);
+		public static VictorSP leftShooter = new VictorSP(Constants.LEFT_SHOOTER_MOTOR_PORT);
+		public static VictorSP rightShooter = new VictorSP(Constants.RIGHT_SHOOTER_MOTOR_PORT);
 		
 		//creates a climber
-		public static Victor climber = new Victor(Constants.PWMPorts.PWM_PORT_SEVEN);
+		public static Victor climber = new Victor(Constants.CLIMBER_MOTOR_PORT);
 		
 		//creates actuator using TalonSRX
-		public static TalonSRX actuator = new TalonSRX(Constants.PWMPorts.PWM_PORT_SIX);
+		public static TalonSRX actuator = new TalonSRX(Constants.ACTUATOR_MOTOR_PORT);
 		
 		//creates robot drive
 		public static RobotDrive driveMain = new RobotDrive(frontLeft, frontRight, backLeft, backRight);
-		
 		
 		//creates objects necessary for pneumatics
 		public static Compressor compressor = new Compressor(Constants.PneumaticConfiguration.COMPRESSOR_NUMBER);

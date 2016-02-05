@@ -38,6 +38,12 @@ public class Constants {
 		public final static int START = 13;
 		public final static int LEFT_JOYSTICK_BUTTON = 14;
 		public final static int RIGHT_JOYSTICK_BUTTON = 15;
+	}
+	
+	public class PneumaticConfiguration{
+		public static final int COMPRESSOR_NUMBER = 0;
+		public static final int SHIFT_FORWARD = 1;
+		public static final int SHIFT_BACKWARD = 2;
 		
 	}
 	

@@ -28,7 +28,7 @@ public class RobotMap {
     // public static int rangefinderPort = 1;
     // public static int rangefinderModule = 1;
 	
-	//created xboxcontroller object 
+	//created xboxcontroller object  
 		public static Joystick xBoxController = new Joystick(0);
 
 		//creates four motors
@@ -55,8 +55,9 @@ public class RobotMap {
 		
 		
 		//creates objects necessary for pneumatics
-		public static Compressor compressor = new Compressor(0);
-		public static DoubleSolenoid piston1 = new DoubleSolenoid(1,2);
+		public static Compressor compressor = new Compressor(Constants.PneumaticConfiguration.COMPRESSOR_NUMBER);
+		public static DoubleSolenoid gearBoxShiftingPiston = new DoubleSolenoid(Constants.PneumaticConfiguration.SHIFT_FORWARD,
+																  Constants.PneumaticConfiguration.SHIFT_BACKWARD);
 		
 		//creates encoder object for actuation
 		public static CANTalon actuation = new CANTalon(0);

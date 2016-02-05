@@ -31,8 +31,9 @@ public class ClimberSubsystem extends Subsystem {
 	}
 	
 	public void Retract()
-	{
+		{
 	
 			RobotMap.climber.set(-Constants.CLIMBER_MOTOR_SPEED_DUTY_CYCLE);
 	
+		}
 	}

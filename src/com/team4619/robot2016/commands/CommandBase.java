@@ -25,6 +25,8 @@ public abstract class CommandBase extends Command {
 	 */
 	public static DriveTrain driveTrain;
 	
+	public static PneumaticDriveTrainShifting pneumaticDriveTrainShifting;
+	
 	public static ShooterMechanism shooterMechanism;
 	/**
 	 * Instance of the OI Class

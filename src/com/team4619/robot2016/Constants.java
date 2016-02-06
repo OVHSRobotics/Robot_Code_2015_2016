@@ -58,7 +58,9 @@ public class Constants {
 	public static final int CLIMBER_MOTOR_PORT = 7;
 	public static final int SERVO_BUMPER_PORT = 8;
 	public static final int PWM_PORT_NINE = 9;
-	public static final int MOTOR_STOP_SPINNING = 0;
+	public static final int MOTOR_STOP_SPINNING = 0;	
+	public static final int SERVO_RUN_FULL_POWER = 1;
+	public static final int SERVO_PWM_PORT = 8;
 
 	public static double Range(double value, double min, double max) {
 		return Math.min(max, Math.max(value, min));

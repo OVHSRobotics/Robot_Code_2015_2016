@@ -81,7 +81,7 @@ public class ShooterMechanism extends Subsystem{
 	
 	public void StartServo()
 	{
-		bumperServo.set(1);
+		bumperServo.set(Constants.SERVO_RUN_FULL_POWER);
 	}
 	
 	public static void increaseShootSpeed()

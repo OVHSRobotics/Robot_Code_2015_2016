@@ -3,9 +3,11 @@ package com.team4619.robot2016.subsystems;
 import edu.wpi.first.wpilibj.Victor;
 import edu.wpi.first.wpilibj.command.Subsystem;
 import com.team4619.robot2016.*;
+import com.team4619.robot2016.commands.climbersubsystem.*;
 
 public class ClimberSubsystem extends Subsystem {
 
+	
 	protected static ClimberSubsystem instance;
 	public static ClimberSubsystem getInstance() {
 		if (ClimberSubsystem.instance == null) {
@@ -16,7 +18,7 @@ public class ClimberSubsystem extends Subsystem {
 	}
 
 	public void initDefaultCommand() {
-	
+		setDefaultCommand(new Stop());
 	}
 
 	public void Extend()
@@ -33,6 +35,6 @@ public class ClimberSubsystem extends Subsystem {
 	
 	public void Stop()
 	{
-		RobotMap.climber.set(0);
+		RobotMap.climber.set(Constants.MOTOR_STOP_SPINNING);
 	}
 }

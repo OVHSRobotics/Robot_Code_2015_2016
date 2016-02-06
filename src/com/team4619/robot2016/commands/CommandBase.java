@@ -41,6 +41,8 @@ public abstract class CommandBase extends Command {
 		
 		CommandBase.shooterMechanism = ShooterMechanism.getInstance();
 		
+		CommandBase.pneumaticDriveTrainShifting = PneumaticDriveTrainShifting.getInstance();
+		
 		// Must be initialized after all subsystems
 		CommandBase.oi = OI.getInstance();
 	}

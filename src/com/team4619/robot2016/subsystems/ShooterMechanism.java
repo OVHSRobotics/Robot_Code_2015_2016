@@ -49,8 +49,8 @@ public class ShooterMechanism extends Subsystem{
 
 	public void StopShooter()
 	{
-		leftShooterMotorSpeedController.set(0);
-		rightShooterMotorSpeedController.set(0);
+		leftShooterMotorSpeedController.set(Constants.MOTOR_STOP_SPINNING);
+		rightShooterMotorSpeedController.set(Constants.MOTOR_STOP_SPINNING);
 	}
 
 	public void AngleDown()
@@ -70,13 +70,13 @@ public class ShooterMechanism extends Subsystem{
 	
 	public void StopChangingAngle()
 	{
-		actuatingMotorSpeedController.set(0);
+		actuatingMotorSpeedController.set(Constants.MOTOR_STOP_SPINNING);
 	}
 	
 	public void StopServo()
 	{
 		//sets servo to start position which keeps the ball from hitting the shooters
-		bumperServo.set(0);
+		bumperServo.set(Constants.MOTOR_STOP_SPINNING);
 	}
 	
 	public void StartServo()

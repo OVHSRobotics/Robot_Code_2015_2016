@@ -60,13 +60,11 @@ public class DriveTrain extends Subsystem {
     	return DriveTrain.instance;
     }
     
-    public void tankDrive()
-    {
+    public void tankDrive() {
     	drive.tankDrive(RobotMap.xBoxController.getRawAxis(Constants.XBoxController.LEFT_JOYSTICK_Y_AXIS), (RobotMap.xBoxController).getRawAxis(Constants.XBoxController.RIGHT_JOYSTICK_Y_AXIS), true);
     }
     
-    public void arcadeDrive()
-    {
+    public void arcadeDrive() {
     	drive.arcadeDrive(RobotMap.xBoxController.getRawAxis(Constants.XBoxController.LEFT_JOYSTICK_Y_AXIS), (RobotMap.xBoxController).getRawAxis(Constants.XBoxController.RIGHT_JOYSTICK_X_AXIS), true);
     }
 }

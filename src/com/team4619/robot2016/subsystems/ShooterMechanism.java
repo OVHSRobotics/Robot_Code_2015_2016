@@ -23,7 +23,6 @@ public class ShooterMechanism extends Subsystem{
 	
 	@Override
 	protected void initDefaultCommand() {
-		// TODO Auto-generated method stub
 		setDefaultCommand(new Stop());
 	}
 	
@@ -35,32 +34,27 @@ public class ShooterMechanism extends Subsystem{
 		return ShooterMechanism.instance;
 	}
 	
-	public void Shoot()
-	{
+	public void Shoot() {
 		leftShooterMotorSpeedController.set(shootPower);
 		rightShooterMotorSpeedController.set(-shootPower);
 	}
 
-	public void Intake()
-	{
+	public void Intake() {
 		leftShooterMotorSpeedController.set(-Constants.Shooter.INTAKE_POWER);
 		rightShooterMotorSpeedController.set(Constants.Shooter.INTAKE_POWER);	
 	}
 
-	public void StopShooter()
-	{
+	public void StopShooter() {
 		leftShooterMotorSpeedController.set(Constants.MOTOR_STOP_SPINNING);
 		rightShooterMotorSpeedController.set(Constants.MOTOR_STOP_SPINNING);
 	}
 
-	public void AngleDown()
-	{
+	public void AngleDown() {
 		//actuates up and actuationAnglecos to certain height
 		actuatingMotorSpeedController.set(-Constants.ACTUATION_SPEED_DUTY_CYCLE);
 	}
 
-	public void AngleUp()
-	{
+	public void AngleUp() {
 		//actuates down and actuationAngles to certain height
 		actuatingMotorSpeedController.set(Constants.ACTUATION_SPEED_DUTY_CYCLE);
 
@@ -68,31 +62,25 @@ public class ShooterMechanism extends Subsystem{
 		int pulseWidthPos = (RobotMap.actuation).getPulseWidthPosition();
 	}
 	
-	public void StopChangingAngle()
-	{
+	public void StopChangingAngle() {
 		actuatingMotorSpeedController.set(Constants.MOTOR_STOP_SPINNING);
 	}
 	
-	public void StopServo()
-	{
+	public void StopServo() {
 		//sets servo to start position which keeps the ball from hitting the shooters
 		bumperServo.set(Constants.MOTOR_STOP_SPINNING);
 	}
 	
-	public void StartServo()
-	{
+	public void StartServo() {
 		bumperServo.set(Constants.SERVO_RUN_FULL_POWER);
 	}
 	
-	public static void increaseShootSpeed()
-	{
+	public static void increaseShootSpeed() {
 		shootPower += (Constants.Shooter.INCREMENT_RATE_DUTY_CYCLE);
 	}
 	
-	public static void decreaseShootSpeed()
-	{
+	public static void decreaseShootSpeed() {
 		shootPower -= (Constants.Shooter.INCREMENT_RATE_DUTY_CYCLE);
 	}
-
 
 }

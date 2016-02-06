@@ -21,20 +21,17 @@ public class ClimberSubsystem extends Subsystem {
 		// TODO Auto-generated method stub
 	}
 
-	public void Extend()
-	{
+	public void Extend() {
 		RobotMap.climber.set(Constants.Range(Constants.CLIMBER_MOTOR_SPEED_DUTY_CYCLE + .22, -1, 1));
 	}
 
-	public void Retract()
-	{
+	public void Retract() {
 
 		RobotMap.climber.set(-Constants.CLIMBER_MOTOR_SPEED_DUTY_CYCLE);
 
 	}
 	
-	public void Stop()
-	{
+	public void Stop() {
 		RobotMap.climber.set(0);
 	}
 }

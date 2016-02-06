@@ -15,23 +15,19 @@ public class PneumaticDriveTrainShifting extends Subsystem  {
 	// 2 ways solenoid valve of pneumatic system
 	DoubleSolenoid pneumaticSolenoidValve = RobotMap.gearBoxShiftingPiston;
 	
-	public void ShiftForward()
-	{
+	public void ShiftForward() {
 		(RobotMap.gearBoxShiftingPiston).set(DoubleSolenoid.Value.kForward);
 	}
-	public void ShiftBackward()
-	{
+	public void ShiftBackward() {
 		(RobotMap.gearBoxShiftingPiston).set(DoubleSolenoid.Value.kReverse);
 	}
-	public void StopShifting()
-	{
+	public void StopShifting() {
 		(RobotMap.gearBoxShiftingPiston).set(DoubleSolenoid.Value.kOff);
 	}
 	
 
-	public static PneumaticDriveTrainShifting getInstance(){
-		if(PneumaticDriveTrainShifting.instance == null)
-		{
+	public static PneumaticDriveTrainShifting getInstance() {
+		if(PneumaticDriveTrainShifting.instance == null) {
 			PneumaticDriveTrainShifting.instance = new PneumaticDriveTrainShifting();
 		}
 		return PneumaticDriveTrainShifting.instance;

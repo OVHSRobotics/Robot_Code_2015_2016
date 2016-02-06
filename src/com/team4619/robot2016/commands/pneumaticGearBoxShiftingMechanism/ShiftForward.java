@@ -13,7 +13,7 @@ public class ShiftForward extends Command{
 	
 	@Override
 	protected void end() {
-		
+		CommandBase.pneumaticDriveTrainShifting.StopShifting();
 		
 	}
 
@@ -25,13 +25,12 @@ public class ShiftForward extends Command{
 
 	@Override
 	protected void initialize() {
-		
-		
+		CommandBase.pneumaticDriveTrainShifting.ShiftForward();
 	}
 
 	@Override
 	protected void interrupted() {
-		
+		CommandBase.pneumaticDriveTrainShifting.StopShifting();
 		
 	}
 

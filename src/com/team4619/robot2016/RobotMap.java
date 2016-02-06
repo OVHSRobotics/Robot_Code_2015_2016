@@ -38,7 +38,7 @@ public class RobotMap {
 		public static VictorSP backRight = new VictorSP(Constants.PWMDrivingPorts.BACK_RIGHT_MOTOR_PORT);
 
 		//creates servo for bumping the ball forward
-		public static Servo bumper = new Servo(8);
+		public static Servo bumper = new Servo(Constants.SERVO_PWM_PORT);
 		
 		//creates two shooters
 		public static VictorSP leftShooter = new VictorSP(Constants.LEFT_SHOOTER_MOTOR_PORT);

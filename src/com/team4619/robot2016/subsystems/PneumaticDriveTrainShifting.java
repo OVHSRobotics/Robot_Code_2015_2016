@@ -1,13 +1,16 @@
 package com.team4619.robot2016.subsystems;
 
 import com.team4619.robot2016.RobotMap;
+import com.team4619.robot2016.commands.shootermechanism.Stop;
+
 import edu.wpi.first.wpilibj.Compressor;
 import edu.wpi.first.wpilibj.DoubleSolenoid;
 import edu.wpi.first.wpilibj.command.Command;
 import edu.wpi.first.wpilibj.command.Subsystem;
+import com.team4619.robot2016.commands.pneumaticGearBoxShiftingMechanism.*;
 
 public class PneumaticDriveTrainShifting extends Subsystem  {
-
+	
 	protected static PneumaticDriveTrainShifting instance;
 	
 	// air compressor for pneumatic system
@@ -34,7 +37,7 @@ public class PneumaticDriveTrainShifting extends Subsystem  {
 	}
 
 	public void initDefaultCommand() {
-		// TODO Auto-generated method stub
+		setDefaultCommand(new StopShifting());
     }
 	
 	

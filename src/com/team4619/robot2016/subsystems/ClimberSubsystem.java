@@ -2,7 +2,6 @@ package com.team4619.robot2016.subsystems;
 
 import edu.wpi.first.wpilibj.Victor;
 import edu.wpi.first.wpilibj.command.Subsystem;
-
 import com.team4619.robot2016.*;
 
 public class ClimberSubsystem extends Subsystem {
@@ -16,9 +15,8 @@ public class ClimberSubsystem extends Subsystem {
 		return ClimberSubsystem.instance;
 	}
 
-	@Override
 	public void initDefaultCommand() {
-		// TODO Auto-generated method stub
+	
 	}
 
 	public void Extend()

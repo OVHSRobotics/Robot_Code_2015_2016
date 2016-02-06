@@ -16,7 +16,7 @@ public class ClimberSubsystem extends Subsystem {
 
 		return ClimberSubsystem.instance;
 	}
-
+ 
 	public void initDefaultCommand() {
 		setDefaultCommand(new Stop());
 	}

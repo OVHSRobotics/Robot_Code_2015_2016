@@ -1,5 +1,7 @@
 package com.team4619.robot2016;
 
+import com.team4619.robot2016.commands.shootermechanism.*;
+
 import edu.wpi.first.wpilibj.Joystick;
 import edu.wpi.first.wpilibj.buttons.Button;
 import edu.wpi.first.wpilibj.buttons.JoystickButton;
@@ -35,12 +37,18 @@ public class OI {
 	// Start the command when the button is released  and let it run the command
 	// until it is finished as determined by it's isFinished method.
 	// button.whenReleased(new ExampleCommand());
-	
+
 	/**	
 	 * Instance of the OI Class
 	 */
 	private static OI instance;
 
+
+	public OI() {
+		A.whileHeld(new Shoot());
+		B.whileHeld(new Intake());
+	}
+	
 	public static Joystick xBoxController = new Joystick(1);
 	public static Button A = new JoystickButton(xBoxController, Constants.XBoxController.BUTTON_A),
 			B = new JoystickButton(xBoxController, Constants.XBoxController.BUTTON_B),
@@ -52,17 +60,17 @@ public class OI {
 			Start = new JoystickButton(xBoxController, Constants.XBoxController.START),
 			leftJoystickButton = new JoystickButton(xBoxController,  Constants.XBoxController.RIGHT_JOYSTICK_BUTTON),
 			rightJoystickButton = new JoystickButton(xBoxController,  Constants.XBoxController.RIGHT_JOYSTICK_BUTTON );
-	
+
 	/**
-     * Gets the instance of the OI Class and creates one if one doesn't exist
-     * @return instance of OI Class
-     */
-    public static OI getInstance() {
-    	if (OI.instance == null) {
-    		OI.instance = new OI();
-    	}
-    	
-    	return OI.instance;
-    }
+	 * Gets the instance of the OI Class and creates one if one doesn't exist
+	 * @return instance of OI Class
+	 */
+	public static OI getInstance() {
+		if (OI.instance == null) {
+			OI.instance = new OI();
+		}
+
+		return OI.instance;
+	}
 }
 

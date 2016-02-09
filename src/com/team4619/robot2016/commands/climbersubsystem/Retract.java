@@ -33,7 +33,7 @@ public class Retract extends Command{
 
 	@Override
 	protected boolean isFinished() {
-		// TODO Auto-generated method stub
+		//use encoder to limit climber
 		return false;
 	}
 

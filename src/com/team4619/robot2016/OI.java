@@ -45,10 +45,10 @@ public class OI {
 
 
 	public OI() {
-		A.whileHeld(new Shoot());
-		B.whileHeld(new Intake());
+		leftTrigger.whileHeld(new Shoot());
+		rightTrigger.whileHeld(new Intake());
 	}
-	
+
 	public static Joystick xBoxController = new Joystick(1);
 	public static Button A = new JoystickButton(xBoxController, Constants.XBoxController.BUTTON_A),
 			B = new JoystickButton(xBoxController, Constants.XBoxController.BUTTON_B),
@@ -60,6 +60,9 @@ public class OI {
 			Start = new JoystickButton(xBoxController, Constants.XBoxController.START),
 			leftJoystickButton = new JoystickButton(xBoxController,  Constants.XBoxController.RIGHT_JOYSTICK_BUTTON),
 			rightJoystickButton = new JoystickButton(xBoxController,  Constants.XBoxController.RIGHT_JOYSTICK_BUTTON );
+
+	public static JoystickAsButton leftTrigger = new JoystickAsButton(xBoxController, Constants.XBoxController.LEFT_TRIGGER, .04),
+									rightTrigger = new JoystickAsButton(xBoxController, Constants.XBoxController.RIGHT_TRIGGER, .04);
 
 	/**
 	 * Gets the instance of the OI Class and creates one if one doesn't exist

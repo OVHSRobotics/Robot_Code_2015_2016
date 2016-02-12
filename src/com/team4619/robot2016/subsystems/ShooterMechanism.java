@@ -83,4 +83,13 @@ public class ShooterMechanism extends Subsystem{
 		shootPower -= (Constants.Shooter.INCREMENT_RATE_DUTY_CYCLE);
 	}
 
+	public void encoderReset() {
+		RobotMap.actuator.setPosition(Constants.ActuatingArm.MIN_ACTUATION_ANGLE);
+	}
+	
+	public double getActuationAngle() {
+		double angle = RobotMap.actuator.getPosition();
+		
+		return angle;
+	}
 }

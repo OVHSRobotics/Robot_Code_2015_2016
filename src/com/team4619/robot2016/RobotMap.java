@@ -29,7 +29,7 @@ public class RobotMap {
 	public static int rangefinderModule = 1;
 
 	//created xboxcontroller object  
-	public static Joystick xBoxController = new Joystick(0);
+	public static Joystick xBoxController;
 
 	//creates four motors
 	public static VictorSP frontLeft;
@@ -63,6 +63,7 @@ public class RobotMap {
 	public static void init() {
 		RobotMap.setUpDrive();
 		RobotMap.setUpSubsystems();
+		xBoxController = new Joystick(0);
 	}
 	
 	public static void setUpDrive() {

@@ -62,6 +62,11 @@ public class Constants {
 	public static final int SERVO_RUN_FULL_POWER = 1;
 	public static final int SERVO_PWM_PORT = 8;
 
+	public class ActuatingArm {
+		public static final double MAX_ACTUATION_ANGLE = 250;
+		public static final double MIN_ACTUATION_ANGLE = 0;
+	}
+	
 	public static double Range(double value, double min, double max) {
 		return Math.min(max, Math.max(value, min));
 	}

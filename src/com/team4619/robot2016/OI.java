@@ -49,6 +49,8 @@ public class OI {
 		rightTrigger.whileHeld(new Intake());
 		leftBumper.whenPressed(new IncrementShootingSpeedDown());
 		rightBumper.whenPressed(new IncrementShootingSpeedUp());
+		A.whenPressed(new PushBallForward());
+		B.whenPressed(new ResetBumper());
 	}
 
 	public static Joystick xBoxController = new Joystick(1);

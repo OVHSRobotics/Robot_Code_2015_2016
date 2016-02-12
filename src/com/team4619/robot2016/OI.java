@@ -47,6 +47,8 @@ public class OI {
 	public OI() {
 		leftTrigger.whileHeld(new Shoot());
 		rightTrigger.whileHeld(new Intake());
+		leftBumper.whenPressed(new IncrementShootingSpeedDown());
+		rightBumper.whenPressed(new IncrementShootingSpeedUp());
 	}
 
 	public static Joystick xBoxController = new Joystick(1);
@@ -54,8 +56,8 @@ public class OI {
 			B = new JoystickButton(xBoxController, Constants.XBoxController.BUTTON_B),
 			X = new JoystickButton(xBoxController, Constants.XBoxController.BUTTON_X),
 			Y = new JoystickButton(xBoxController, Constants.XBoxController.BUTTON_Y),
-			lBumper = new JoystickButton(xBoxController, Constants.XBoxController.L_BUMPER),
-			rBumper = new JoystickButton(xBoxController, Constants.XBoxController.R_BUMPER),
+			leftBumper = new JoystickButton(xBoxController, Constants.XBoxController.L_BUMPER),
+			rightBumper = new JoystickButton(xBoxController, Constants.XBoxController.R_BUMPER),
 			Back = new JoystickButton(xBoxController, Constants.XBoxController.BACK),
 			Start = new JoystickButton(xBoxController, Constants.XBoxController.START),
 			leftJoystickButton = new JoystickButton(xBoxController,  Constants.XBoxController.RIGHT_JOYSTICK_BUTTON),

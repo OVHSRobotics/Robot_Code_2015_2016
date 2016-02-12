@@ -32,6 +32,8 @@ public class Robot extends IterativeRobot {
 	 * used for any initialization code.
 	 */
 	public void robotInit() {
+		RobotMap.init();
+		CommandBase.init();
 		oi = new OI();
 		// instantiate the command used for the autonomous period
 	}
@@ -65,7 +67,7 @@ public class Robot extends IterativeRobot {
 	 * You can use it to reset subsystems before shutting down.
 	 */
 	public void disabledInit(){
-
+		Scheduler.getInstance().removeAll();
 	}
 
 	/**

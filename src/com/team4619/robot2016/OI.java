@@ -49,7 +49,7 @@ public class OI {
 		rightTrigger.whileHeld(new Intake());
 		leftBumper.whenPressed(new IncrementShootingSpeedDown());
 		rightBumper.whenPressed(new IncrementShootingSpeedUp());
-		A.whenPressed(new PushBallForward());
+		A.toggleWhenPressed(new PushBallForward());
 		B.whenPressed(new ResetBumper());
 	}
 

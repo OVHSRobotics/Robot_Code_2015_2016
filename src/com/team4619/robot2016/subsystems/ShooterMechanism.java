@@ -71,7 +71,7 @@ public class ShooterMechanism extends Subsystem{
 		bumperServo.set(Constants.MOTOR_STOP_SPINNING);
 	}
 	
-	public void StartServo() {
+	public void FullServoRotation() {
 		bumperServo.set(Constants.SERVO_RUN_FULL_POWER);
 	}
 	

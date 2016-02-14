@@ -12,12 +12,12 @@ public class PushBallForward extends Command {
 
 	@Override
 	protected void execute() {
-		
+		CommandBase.shooterMechanism.FullServoRotation();
 	}
 
 	@Override
 	protected void initialize() {
-		CommandBase.shooterMechanism.StartServo();
+		CommandBase.shooterMechanism.FullServoRotation();
 	}
 
 	@Override

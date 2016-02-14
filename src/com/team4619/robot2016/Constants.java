@@ -16,7 +16,7 @@ public class Constants {
 	public final static double CLIMBER_MOTOR_SPEED_DUTY_CYCLE = .15;
 
 	public static class Shooter {
-		public final static double INTAKE_POWER = .32;
+		public final static double INTAKE_POWER = .6;
 		public final static double INCREMENT_RATE_DUTY_CYCLE = .25;
 	}
 

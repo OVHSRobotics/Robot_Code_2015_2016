@@ -7,6 +7,9 @@ import edu.wpi.first.wpilibj.TalonSRX;
 import edu.wpi.first.wpilibj.Victor;
 import edu.wpi.first.wpilibj.command.Subsystem;
 
+import com.team4619.robot2016.Constants;
+import com.team4619.robot2016.RobotMap;
+
 import com.team4619.robot2016.*;
 import com.team4619.robot2016.commands.TankDrive;
 import com.team4619.robot2016.commands.shootermechanism.Stop;
@@ -14,7 +17,7 @@ import com.team4619.robot2016.commands.shootermechanism.Stop;
 public class ShooterMechanism extends Subsystem{
 
 	protected static ShooterMechanism instance;
-	public static double shootPower = .75;
+	public static double shootPower = 1;
 	
 	SpeedController leftShooterMotorSpeedController = RobotMap.leftShooter;
 	SpeedController rightShooterMotorSpeedController = RobotMap.rightShooter;
@@ -35,12 +38,12 @@ public class ShooterMechanism extends Subsystem{
 	}
 	
 	public void Shoot() {
-		leftShooterMotorSpeedController.set(shootPower);
+		leftShooterMotorSpeedController.set(-shootPower);
 		rightShooterMotorSpeedController.set(-shootPower);
 	}
 
 	public void Intake() {
-		leftShooterMotorSpeedController.set(-Constants.Shooter.INTAKE_POWER);
+		leftShooterMotorSpeedController.set(Constants.Shooter.INTAKE_POWER);
 		rightShooterMotorSpeedController.set(Constants.Shooter.INTAKE_POWER);	
 	}
 

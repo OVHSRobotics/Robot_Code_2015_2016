@@ -1,6 +1,7 @@
 package com.team4619.robot2016.commands.shootermechanism;
 
 import com.team4619.robot2016.Constants;
+
 import com.team4619.robot2016.commands.CommandBase;
 import edu.wpi.first.wpilibj.command.Command;
 

@@ -17,7 +17,7 @@ public class Intake extends Command{
 
 	@Override
 	protected void execute() {
-		
+		CommandBase.shooterMechanism.Intake();
 	}
 
 	@Override

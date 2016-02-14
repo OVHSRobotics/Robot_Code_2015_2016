@@ -1,5 +1,9 @@
-package com.team4619.robot2016;
+package com.team4619.robot2016.commands;
 
+import com.team4619.robot2016.Constants;
+import com.team4619.robot2016.JoystickAsButton;
+
+import com.team4619.robot2016.Constants.XBoxController;
 import com.team4619.robot2016.commands.shootermechanism.*;
 
 import edu.wpi.first.wpilibj.Joystick;
@@ -45,12 +49,14 @@ public class OI {
 
 
 	public OI() {
-		leftTrigger.whileHeld(new Shoot());
-		rightTrigger.whileHeld(new Intake());
+		leftTrigger.whenPressed(new Intake());
+		leftTrigger.whenReleased(new Stop());
+		rightTrigger.whenPressed(new Shoot());
+		rightTrigger.whenReleased(new Stop());
 		leftBumper.whenPressed(new IncrementShootingSpeedDown());
 		rightBumper.whenPressed(new IncrementShootingSpeedUp());
-		A.toggleWhenPressed(new PushBallForward());
-		B.whenPressed(new ResetBumper());
+		A.whenPressed(new PushBallForward());
+		A.whenReleased(new ResetBumper());
 	}
 
 	public static Joystick xBoxController = new Joystick(1);

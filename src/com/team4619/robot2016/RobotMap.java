@@ -9,7 +9,7 @@ import edu.wpi.first.wpilibj.Servo;
 import edu.wpi.first.wpilibj.TalonSRX;
 import edu.wpi.first.wpilibj.Victor;
 import edu.wpi.first.wpilibj.VictorSP;
-import com.team4619.robot2016.*;
+//import com.team4619.robot2016.*;
 
 /**
  * The RobotMap is a mapping from the ports sensors and actuators are wired into

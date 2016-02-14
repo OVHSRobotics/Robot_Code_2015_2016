@@ -17,6 +17,7 @@ public class Shoot extends Command{
 
 	@Override
 	protected void execute() {
+		CommandBase.shooterMechanism.Shoot();
 	}
 
 	@Override

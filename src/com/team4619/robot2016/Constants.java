@@ -20,6 +20,10 @@ public class Constants {
 		public final static double INCREMENT_RATE_DUTY_CYCLE = .25;
 	}
 
+	public class Autonomous {
+		public final static int DRIVE_FORWARD_3_SECONDS = 3;
+	}
+	
 	public class XBoxController {
 		public final static int LEFT_JOYSTICK_X_AXIS = 0;
 		public final static int LEFT_JOYSTICK_Y_AXIS = 1; 
